@@ -4,7 +4,7 @@ function AboutMe() {
   return (
     <div className="AboutMe screen-height row m-0">
       <div className="col-md-4 d-flex justify-content-center align-items-center">
-        <img className="img-responsive" src={require("../../assets/images/me.png")} width="300"/>
+        <img className="img-responsive" src={require("../../assets/images/me.png")} alt="Picture of me" width="300"/>
       </div>
       <div className="col-md-8 d-flex justify-content-center align-items-center">
         <p>

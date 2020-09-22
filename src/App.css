@@ -12,6 +12,13 @@
   z-index: 1000;
 }
 
+.Footer {
+  background-color: var(--green);
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+}
+
 .NavBarItem {
   cursor: pointer;
 }
@@ -20,8 +27,12 @@
   height: 100vh;
 }
 
-.project-img {
-  width: inherit;
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.projects-title {
+  font-size: 100px;
 }
 
 .Intro {
@@ -38,8 +49,4 @@
 
 .Projects {
   background-color: var(--blue);
-}
-
-.Footer {
-  background-color: var(--green);
 }

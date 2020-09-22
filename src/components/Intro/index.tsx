@@ -20,7 +20,7 @@ function Intro() {
   return (
     <div className="Intro screen-height d-flex justify-content-center align-items-center">
       <animated.div style={introPicProps}>
-        <img src={require("../../assets/images/intropic.png")} width="500"/>
+        <img src={require("../../assets/images/intropic.png")} alt="Picture of girl at a computer" width="500"/>
       </animated.div>
       <div className="Introduction d-flex justify-content-center align-items-center flex-column text-white">
         <animated.h1 style={h1Props}>
