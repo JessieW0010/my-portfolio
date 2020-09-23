@@ -12,6 +12,7 @@
 .Logo-text {
   font-family: 'Inconsolata', monospace;
   font-size: x-large;
+  color: white;
 }
 
 .Logo-container {
@@ -36,8 +37,14 @@
   z-index: 1000;
 }
 
-.NavBarItem {
-  cursor: pointer;
+.fit-content {
+  width: fit-content;
+}
+
+.contact-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .screen-height {
@@ -52,14 +59,28 @@
   font-size: 100px;
 }
 
+.menu-btn {
+  min-width: 3em;
+}
+
+.projects-title:hover,
+.menu-btn:hover,
+.NavBarItem {
+  cursor: pointer;
+}
+
 .Introduction {
   position: absolute;
 }
 
 .Intro-container {
-  background: linear-gradient(181deg, var(--pink), var(--green));
+  background: linear-gradient(181deg, var(--pink), var(--yellow), var(--turquoise));
 }
 
 .Projects {
   background-color: var(--blue);
+}
+
+.AboutMe {
+  background-color: var(--green);
 }

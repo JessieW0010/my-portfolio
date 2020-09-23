@@ -11,6 +11,7 @@ import {
   RouteComponentProps,
   withRouter
 } from 'react-router-dom';
+import AboutMe from './components/AboutMe';
 
 interface IAppProps extends RouteComponentProps {
   
@@ -33,8 +34,9 @@ function App({ location }: IAppProps) {
       {transitions.map(({ item, props, key }) => (
         <animated.div key={key} style={props}>
           <Switch location={item}>
-            <Route path="/projects" component={Projects} />
-            <Route path="/parallax" component={ParallaxPage} />
+            <Route exact path="/aboutme" component={AboutMe} />
+            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/parallax" component={ParallaxPage} />
             <Route path="/" component={Intro} />
           </Switch>
         </animated.div>

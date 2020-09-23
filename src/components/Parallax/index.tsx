@@ -12,7 +12,7 @@ export default function ParallaxPage() {
         {({ isVisible }) => (
           <Spring delay={1000} to={{ opacity: isVisible ? 1 : 0 }}>
             {({ opacity }) => (
-              <h2 style={{ ...h2Styles, opacity }}>Hello</h2>
+              <h2 style={{ ...h2Styles, opacity }}>PlanIt</h2>
             )}
           </Spring>
         )}
