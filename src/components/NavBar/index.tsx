@@ -19,6 +19,7 @@ function NavBar({
     { key: "/", text: "INTRO" },
     { key: "/aboutme", text: "ABOUT ME" },
     { key: "/projects", text: "PROJECTS" },
+    { key: "/contact", text: "CONTACT" },
   ];
 
   const transitions = useTransition(items, item => item.key, {
@@ -28,27 +29,17 @@ function NavBar({
     config: { duration: 1000 }
   });
 
-  const logoProps = useSpring({ 
-    from: { transform: 'translate3d(-60px,0,0)' },
-    to: { transform: 'translate3d(0px,0,0)' }, 
-    config: { duration: 1000 }
-  });
-
-  const contactProps = useSpring({ 
-    from: { transform: 'translate3d(60px,0,0)' },
-    to: { transform: 'translate3d(0px,0,0)' }, 
-    config: { duration: 1000 }
-  });
-
   return (
-    <div className="NavBar w-100 p-2 d-flex justify-content-between">
-        <animated.div className="ml-2 mr-2" style={logoProps}><NavLink className={pathname === "/" ? "text-decoration-underline" : ""} to="/">LOGO</NavLink></animated.div>
-      <div className="d-flex justify-content-between">
-        { transitions.map(({ item, props, key }) => <animated.div className="ml-2 mr-2" key={key} style={props}>
+    <div className="NavBar w-100 p-2">
+        <div className="pb-2 Logo-container">
+          <NavLink className="Logo" to="/">
+            <p className="Logo-text p-0 m-0 pl-2">Jessie</p>
+            <p className="Logo-text p-0 m-0 pl-2">Wang</p>
+          </NavLink>
+        </div>
+        { transitions.map(({ item, props, key }) => <animated.div className="ml-2" key={key} style={props}>
           <NavLink className={pathname === item.key ? "text-decoration-underline" : ""} to={item.key}>{item.text}</NavLink>
         </animated.div>) }
-      </div>
-        <animated.div className="ml-2 mr-2" style={contactProps}><NavLink className={pathname === "/contact" ? "text-decoration-underline" : ""} to="/contact">CONTACT</NavLink></animated.div>
       </div>
   );
 }

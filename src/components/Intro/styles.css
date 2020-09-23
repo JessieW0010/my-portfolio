@@ -1,0 +1,48 @@
+.background,
+.base,
+.right-steam,
+.left-steam,
+.computer {
+  position: absolute;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.background {
+  min-width: 60ch;
+  min-height: 60ch;
+  width: 45vw;
+  height: 45vw;
+  max-width: 100ch;
+  max-height: 100ch;
+  background-image: url(https://image.flaticon.com/icons/svg/119/119596.svg);
+}
+
+.right-steam {
+  width: 50ch;
+  height: 50ch;
+  z-index: 1000;
+  background-image: url("../../assets//images/right_steam.png");
+}
+
+.left-steam {
+  width: 50ch;
+  height: 50ch;
+  z-index: 1000;
+  background-image: url("../../assets//images/left_steam.png");
+}
+
+.base {
+  width: 50ch;
+  height: 50ch;
+  background-image: url("../../assets//images/base.png");
+}
+
+.computer {
+  width: 50ch;
+  height: 50ch;
+  background-image: url("../../assets//images/computer.png");
+}

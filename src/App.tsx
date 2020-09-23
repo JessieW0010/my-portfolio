@@ -2,9 +2,8 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Intro from './components/Intro';
-import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
-import Footer from './components/Footer';
+import ParallaxPage from './components/Parallax';
 import { useTransition, animated } from 'react-spring';
 import {
   Route,
@@ -34,13 +33,12 @@ function App({ location }: IAppProps) {
       {transitions.map(({ item, props, key }) => (
         <animated.div key={key} style={props}>
           <Switch location={item}>
-            <Route path="/aboutme" component={AboutMe} />
             <Route path="/projects" component={Projects} />
+            <Route path="/parallax" component={ParallaxPage} />
             <Route path="/" component={Intro} />
           </Switch>
         </animated.div>
       ))}
-      <Footer/>
     </div>
   );
 }

@@ -1,9 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&display=swap');
+
 :root {
   --pink: #f9b4ab;
   --yellow: #fdebd3;
   --blue: #264e70;
   --green: #679186;
   --turquoise: #bbd4ce;
+}
+
+
+.Logo-text {
+  font-family: 'Inconsolata', monospace;
+  font-size: x-large;
+}
+
+.Logo-container {
+  width: fit-content;
+}
+
+.Logo:hover {
+  color: red;
+  text-decoration: none;
 }
 
 .NavBar {
@@ -35,16 +52,12 @@
   font-size: 100px;
 }
 
-.Intro {
-  background-color: var(--yellow);
-}
-
 .Introduction {
   position: absolute;
 }
 
-.AboutMe {
-  background-color: var(--turquoise);
+.Intro-container {
+  background: linear-gradient(181deg, var(--pink), var(--green));
 }
 
 .Projects {
