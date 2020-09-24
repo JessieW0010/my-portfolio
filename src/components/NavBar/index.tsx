@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { render } from '@testing-library/react';
 
 interface INavBar extends RouteComponentProps {
 
@@ -31,23 +32,29 @@ function NavBar({
     config: { duration: 1000 }
   });
 
+  const renderNavItems = () => {
+    return (
+      transitions.map(({ item, props, key }) => <animated.div className="ml-2" key={key} style={props}>
+        <NavLink className={`text-white ${pathname === item.key ? "text-decoration-underline" : ""}`} to={item.key}>{item.text}</NavLink>
+      </animated.div>)
+    )
+  }
+
   const toggleMenu = () => {
     setMenu(!isMenuOpen);
   }
 
   return (
     <div className="NavBar w-100 p-2">
-        <div className="pb-2 Logo-container w-100">
+        <div className="pb-2 width-fit-content w-100">
           <NavLink className="Logo" to="/">
             <p className="Logo-text p-0 m-0 pl-2">Jessie</p>
             <p className="Logo-text p-0 m-0 pl-2">Wang</p>
           </NavLink>
         </div>
-        <div className="fit-content">
-          { isMenuOpen && transitions.map(({ item, props, key }) => <animated.div className="ml-2" key={key} style={props}>
-            <NavLink className={`text-white ${pathname === item.key ? "text-decoration-underline" : ""}`} to={item.key}>{item.text}</NavLink>
-          </animated.div>) }
-          <div className="d-flex justify-content-center menu-btn" onClick={toggleMenu}>
+        <div className="width-fit-content">
+          { isMenuOpen && renderNavItems() }
+          <div className="d-flex justify-content-center menu-btn p-2 pl-3 w-75" onClick={toggleMenu}>
             <FontAwesomeIcon className="text-white" icon={isMenuOpen ? faChevronUp : faChevronDown}/>
           </div>
         </div>

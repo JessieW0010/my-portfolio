@@ -1,0 +1,59 @@
+.background,
+.aboutme-me,
+.things-i-love {
+  position: absolute;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.things-i-love:hover {
+  cursor: pointer;
+}
+
+.background {
+  background-image: url(https://image.flaticon.com/icons/svg/119/119596.svg);
+}
+
+.guitar {
+  width: 50ch;
+  height: 50ch;
+  z-index: 1000;
+  background-image: url("../../assets/images/guitar.png");
+}
+
+.erlenmyer {
+  width: 50ch;
+  height: 50ch;
+  z-index: 1000;
+  background-image: url("../../assets/images/erlenmyer.png");
+}
+
+.aboutme-me {
+  width: 50ch;
+  height: 50ch;
+  background-image: url("../../assets/images/about_me.png");
+}
+
+.ipad {
+  width: 50ch;
+  height: 50ch;
+  z-index: 1000;
+  background-image: url("../../assets/images/ipad.png");
+}
+
+.rubiks {
+  width: 50ch;
+  height: 50ch;
+  z-index: 1000;
+  background-image: url("../../assets/images/rubiks_cub.png");
+}
+
+.onion {
+  width: 50ch;
+  height: 50ch;
+  z-index: 1000;
+  background-image: url("../../assets/images/onion.png");
+}

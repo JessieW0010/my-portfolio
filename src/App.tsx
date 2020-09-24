@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Intro from './components/Intro';
 import Projects from './components/Projects';
-import ParallaxPage from './components/Parallax';
+import ProjectSummary from './components/Projects/components/ProjectSummary';
 import { useTransition, animated } from 'react-spring';
 import {
   Route,
@@ -36,7 +36,7 @@ function App({ location }: IAppProps) {
           <Switch location={item}>
             <Route exact path="/aboutme" component={AboutMe} />
             <Route exact path="/projects" component={Projects} />
-            <Route exact path="/parallax" component={ParallaxPage} />
+            <Route exact path="/parallax" component={ProjectSummary} />
             <Route path="/" component={Intro} />
           </Switch>
         </animated.div>

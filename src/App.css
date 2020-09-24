@@ -15,10 +15,6 @@
   color: white;
 }
 
-.Logo-container {
-  width: fit-content;
-}
-
 .Logo:hover {
   color: red;
   text-decoration: none;
@@ -37,7 +33,7 @@
   z-index: 1000;
 }
 
-.fit-content {
+.width-fit-content {
   width: fit-content;
 }
 
@@ -74,7 +70,7 @@
 }
 
 .Intro-container {
-  background: linear-gradient(181deg, var(--pink), var(--yellow), var(--turquoise));
+  background: linear-gradient(181deg, var(--blue), var(--turquoise), var(--green));
 }
 
 .Projects {
